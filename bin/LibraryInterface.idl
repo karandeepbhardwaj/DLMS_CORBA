@@ -1,0 +1,14 @@
+module Library{
+	interface LibraryInterface{
+
+		string addItem(in string managerID, in string itemID,in string itemName, in long quantity);
+		string removeItem(in string managerID,in string itemID,in long quantity, in long option);
+		string listItemAvailability(in string managerID);
+		
+		string borrowItem(in string userID, in string itemID);
+		string findItem(in string userID, in string itemName, in boolean fromOtherServer);
+		string returnItem(in string userID, in string itemID);
+		string waitingList(in string userID, in string itemID);
+		string exchangeItem(in string userID, in string newItemID, in string oldItemID, in boolean fromOtherServer);
+		};
+	};
